@@ -242,7 +242,7 @@ init();
 window.addEventListener('resize', onResize);
 
 async function init(){
-  const rows = await loadCSV('./boxoffice_top50_roi.csv');
+  const rows = await loadCSV('/boxoffice_top50_roi.csv');
   const data = rows.map(r => ({
     Title: r.Title || r.title || 'Untitled',
     Worldwide_Gross: num(r.Worldwide_Gross || r.Gross || 0),
